@@ -7,9 +7,6 @@ int A_to_B(char str[]) {
         if (str[i] == 'A') {
 			num_As += 1;
 			str[i] = 'B';
-		} else if (str[i] == 'a') {
-			num_As += 1;
-			str[i] = 'b';
 		}
     }
 	return num_As;

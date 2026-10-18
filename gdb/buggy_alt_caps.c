@@ -15,9 +15,9 @@ char capitalize_char(char ch) {
 // Takes a string, uppercases every other character
 // e.g. "hello world" -> "HeLlO WoRlD"
 void alternate_caps(char str[]) {
-    int len = strlen(str);
+    size_t len = strlen(str);
 
-    for(int i = 0; i < len; i += 2) {
+    for(size_t i = 0; i < len; i += 2) {
         str[i] = capitalize_char(str[i]);
     }
 }
