@@ -22,7 +22,7 @@ int reverse(char str[]) {
 
     // Stop when i and j meet in the middle
     while (i < j) {
-        num_swaps += (2 * swap(str, i, j));
+        num_swaps += swap(str, i, j);
         i++;
         j--;
     }
