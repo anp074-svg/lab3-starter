@@ -18,7 +18,13 @@ void alternate_caps(char str[]) {
     size_t len = strlen(str);
 
     for(size_t i = 0; i < len; i += 2) {
-        str[i] = capitalize_char(str[i]);
+        if (i % 2 == 0) {
+			str[i] = capitalize_char(str[i]);
+		} else {
+			if (str[i] >= 'A' && str[i] <= 'Z') {
+				str[i] = str[i] + 32;
+			}
+		}
     }
 }
 
