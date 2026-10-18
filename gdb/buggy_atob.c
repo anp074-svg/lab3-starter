@@ -3,10 +3,14 @@
 // edits the string, then returns how many changed
 int A_to_B(char str[]) {
     int num_As = 0;
-    for (int i=0; str[i] != '\0'; i++) {
-        if (str[i] == 'A')
-            num_As += 1;
-            str[i] = 'B';
+    for (int i= 0; str[i] != '\0'; i++) {
+        if (str[i] == 'A') {
+			num_As += 1;
+			str[i] = 'B';
+		} else if (str[i] == 'a') {
+			num_As += 1;
+			str[i] = 'b';
+		}
     }
 	return num_As;
 }
@@ -18,7 +22,7 @@ int main(int argc, char *argv[]) {
     char *strings[] = {s1, s2, s3};
     int num_strings = 3;
 
-    for (int i=0; i < num_strings ; i++) {
+    for (int i= 0; i < num_strings ; i++) {
         int num_As = A_to_B(strings[i]);
         printf("\"%s\": %d 'A'es replaced\n", strings[i], num_As);
     }
